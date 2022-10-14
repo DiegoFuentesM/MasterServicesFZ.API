@@ -1,0 +1,27 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using MediatR;
+using VehicleBrands.Domain;
+using System.Net;
+using VehicleBrands.Application.Features.Querys.GetAllBrandsQuery;
+
+namespace MasterServicesFZ.API.Controllers
+{
+    [ApiController]
+    [Route("api/v1/[controller]")]
+    public class VehicleBrandsController : Controller
+    {
+        private readonly IMediator _mediator;
+
+        [HttpGet]
+        [ProducesResponseType(typeof(VehicleBrand), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+        public async Task<IActionResult> GetVehicleBrands()
+        {
+            var brands = await _mediator.Send(new GetAllBrandsQuery());
+            return Ok(brands);
+        }
+
+        
+
+    }
+}
