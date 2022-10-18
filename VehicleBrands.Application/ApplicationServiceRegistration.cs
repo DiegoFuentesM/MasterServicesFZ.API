@@ -2,9 +2,9 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using Core.Application.Behaviors;
+using MasterServicesFZ.Application.Behaviors;
 
-namespace Core.Application
+namespace MasterServicesFZ.Application
 {
     public static class ApplicationServiceRegistration
     {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using Core.Application.Contracts.Persistence;
-using Infrastructure.Persistence;
+using MasterServicesFZ.Application.Contracts.Persistence;
+using MasterServicesFZ.Infrastructure.Persistence;
 
-namespace Infrastructure.Repositories
+namespace MasterServicesFZ.Infrastructure.Repositories
 {
     public class RepositoryBase<T> : IAsyncRepository<T> where T : class
     {

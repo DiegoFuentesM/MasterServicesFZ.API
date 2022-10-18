@@ -5,7 +5,7 @@ using MediatR;
 
 namespace MasterServicesFZ.Application.Features.Querys.GetAllIdinticationTypesQuery
 {
-    public class GetAllIdentificationTypesQueryHandler : IRequestHandler<GetAllIdentificationTypesQuery, List<IdentificactionType>
+    public class GetAllIdentificationTypesQueryHandler : IRequestHandler<GetAllIdentificationTypesQuery, List<IdentificactionType>>
     {
         private readonly IIdentificationTypeRepository _identificationRepository;
         private readonly IMapper _mapper;

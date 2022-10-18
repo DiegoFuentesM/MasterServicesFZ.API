@@ -1,5 +1,5 @@
-using Core.Application;
-using Infrastructure;
+using MasterServicesFZ.Application;
+using MasterServicesFZ.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 

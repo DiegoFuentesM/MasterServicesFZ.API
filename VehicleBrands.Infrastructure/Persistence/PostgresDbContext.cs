@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Core.Domain;
+using MasterServicesFZ.Domain;
 
-namespace Infrastructure.Persistence
+namespace MasterServicesFZ.Infrastructure.Persistence
 {
     public class PostgresDbContext : DbContext
     {

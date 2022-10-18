@@ -1,4 +1,4 @@
-﻿namespace Core.Domain
+﻿namespace MasterServicesFZ.Domain
 {
     public class VehicleBrand
     {

@@ -1,8 +1,8 @@
 ﻿using MediatR;
-using Core.Application.Features.Querys.GetAllBrandsQuery.Vm;
-using Core.Domain;
+using MasterServicesFZ.Application.Features.Querys.GetAllBrandsQuery.Vm;
+using MasterServicesFZ.Domain;
 
-namespace Core.Application.Features.Querys.GetAllBrandsQuery
+namespace MasterServicesFZ.Application.Features.Querys.GetAllBrandsQuery
 {
     public class GetAllBrandsQuery : IRequest<List<VehicleBrand>>
     {

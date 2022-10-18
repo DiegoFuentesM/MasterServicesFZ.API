@@ -1,8 +1,8 @@
-﻿using Core.Application.Contracts.Persistence;
-using Core.Domain;
-using Infrastructure.Persistence;
+﻿using MasterServicesFZ.Application.Contracts.Persistence;
+using MasterServicesFZ.Domain;
+using MasterServicesFZ.Infrastructure.Persistence;
 
-namespace Infrastructure.Repositories
+namespace MasterServicesFZ.Infrastructure.Repositories
 {
     public class BrandRepository : RepositoryBase<VehicleBrand>, IVehicleBrandRepository
     {

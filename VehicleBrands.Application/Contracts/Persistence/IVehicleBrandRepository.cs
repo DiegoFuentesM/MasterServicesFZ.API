@@ -1,6 +1,6 @@
-﻿using Core.Domain;
+﻿using MasterServicesFZ.Domain;
 
-namespace Core.Application.Contracts.Persistence
+namespace MasterServicesFZ.Application.Contracts.Persistence
 {
     public interface IVehicleBrandRepository : IAsyncRepository<VehicleBrand>
     {

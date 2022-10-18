@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Core.Application.Contracts.Persistence
+namespace MasterServicesFZ.Application.Contracts.Persistence
 {
     public interface IAsyncRepository<T> where T : class
     {
