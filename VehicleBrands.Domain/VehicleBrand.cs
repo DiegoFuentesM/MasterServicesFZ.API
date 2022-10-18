@@ -2,9 +2,9 @@
 {
     public class VehicleBrand
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public bool Activo { get; set; }
-        public bool Indio_Chino { get; set; }
+        public string id { get; set; }
+        public string nombre{ get; set; }
+        public bool activo { get; set; }
+        public bool indio_chino { get; set; }
     }
 }
