@@ -12,7 +12,7 @@ namespace VehicleBrands.Infrastructure
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<VehicleBrandsDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("BrandsConnectionString"))
+                options.UseNpgsql(configuration.GetConnectionString("PostgreConnection"))
             );
                 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
