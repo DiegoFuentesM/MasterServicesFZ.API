@@ -19,8 +19,11 @@ namespace MasterServicesFZ.Infrastructure
             );
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
+            services.AddScoped(typeof(IAsyncRepository<>), typeof(SqlRepositoryBase<>));
+
             services.AddScoped<IVehicleBrandRepository, BrandRepository>();
             services.AddScoped<IIdentificationTypeRepository, IdentificationTypeRepository>();
+            services.AddScoped<IDepartamentRepository, DepartamentRepository>();
 
             return services;
         }
