@@ -12,6 +12,11 @@ namespace MasterServicesFZ.API.Controllers
     {
         private readonly IMediator _mediator;
 
+        public VehicleBrandsController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+
         [HttpGet]
         [ProducesResponseType(typeof(VehicleBrand), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
