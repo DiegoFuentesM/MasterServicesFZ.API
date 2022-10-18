@@ -2,9 +2,9 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using VehicleBrands.Application.Behaviors;
+using Core.Application.Behaviors;
 
-namespace VehicleBrands.Application
+namespace Core.Application
 {
     public static class ApplicationServiceRegistration
     {

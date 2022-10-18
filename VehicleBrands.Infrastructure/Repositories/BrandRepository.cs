@@ -1,12 +1,12 @@
-﻿using VehicleBrands.Application.Contracts.Persistence;
-using VehicleBrands.Domain;
-using VehicleBrands.Infrastructure.Persistence;
+﻿using Core.Application.Contracts.Persistence;
+using Core.Domain;
+using Infrastructure.Persistence;
 
-namespace VehicleBrands.Infrastructure.Repositories
+namespace Infrastructure.Repositories
 {
     public class BrandRepository : RepositoryBase<VehicleBrand>, IVehicleBrandRepository
     {
-        public BrandRepository(VehicleBrandsDbContext context) : base(context)
+        public BrandRepository(PostgresDbContext context) : base(context)
         {
         }
     }

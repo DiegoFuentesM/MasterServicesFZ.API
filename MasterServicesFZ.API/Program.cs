@@ -1,5 +1,5 @@
-using VehicleBrands.Application;
-using VehicleBrands.Infrastructure;
+using Core.Application;
+using Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace VehicleBrands.Application.Contracts.Persistence
+namespace Core.Application.Contracts.Persistence
 {
     public interface IAsyncRepository<T> where T : class
     {

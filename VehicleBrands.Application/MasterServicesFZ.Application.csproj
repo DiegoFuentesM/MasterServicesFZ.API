@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VehicleBrands.Domain\VehicleBrands.Domain.csproj" />
+    <ProjectReference Include="..\VehicleBrands.Domain\MasterServicesFZ.Domain.csproj" />
   </ItemGroup>
 
 </Project>

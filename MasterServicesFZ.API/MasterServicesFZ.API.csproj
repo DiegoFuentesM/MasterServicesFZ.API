@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VehicleBrands.Application\VehicleBrands.Application.csproj" />
-    <ProjectReference Include="..\VehicleBrands.Infrastructure\VehicleBrands.Infrastructure.csproj" />
+    <ProjectReference Include="..\VehicleBrands.Application\MasterServicesFZ.Application.csproj" />
+    <ProjectReference Include="..\VehicleBrands.Infrastructure\MasterServicesFZ.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

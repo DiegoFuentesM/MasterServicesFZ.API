@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MediatR;
-using VehicleBrands.Domain;
+using Core.Domain;
 using System.Net;
-using VehicleBrands.Application.Features.Querys.GetAllBrandsQuery;
+using Core.Application.Features.Querys.GetAllBrandsQuery;
 
 namespace MasterServicesFZ.API.Controllers
 {

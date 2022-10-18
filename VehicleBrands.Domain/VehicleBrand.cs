@@ -1,4 +1,4 @@
-﻿namespace VehicleBrands.Domain
+﻿namespace Core.Domain
 {
     public class VehicleBrand
     {

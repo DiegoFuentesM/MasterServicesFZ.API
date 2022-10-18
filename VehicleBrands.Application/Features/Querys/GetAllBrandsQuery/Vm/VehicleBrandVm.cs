@@ -1,4 +1,4 @@
-﻿namespace VehicleBrands.Application.Features.Querys.GetAllBrandsQuery.Vm
+﻿namespace Core.Application.Features.Querys.GetAllBrandsQuery.Vm
 {
     public class VehicleBrandVm
     {

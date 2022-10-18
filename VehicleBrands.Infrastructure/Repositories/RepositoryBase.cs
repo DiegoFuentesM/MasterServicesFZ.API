@@ -1,15 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using VehicleBrands.Application.Contracts.Persistence;
-using VehicleBrands.Infrastructure.Persistence;
+using Core.Application.Contracts.Persistence;
+using Infrastructure.Persistence;
 
-namespace VehicleBrands.Infrastructure.Repositories
+namespace Infrastructure.Repositories
 {
     public class RepositoryBase<T> : IAsyncRepository<T> where T : class
     {
-        protected readonly VehicleBrandsDbContext _context;
+        protected readonly PostgresDbContext _context;
 
-        public RepositoryBase(VehicleBrandsDbContext context)
+        public RepositoryBase(PostgresDbContext context)
         {
             _context = context;
         }

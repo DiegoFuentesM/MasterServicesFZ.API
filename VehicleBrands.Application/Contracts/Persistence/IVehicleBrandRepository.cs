@@ -1,6 +1,6 @@
-﻿using VehicleBrands.Domain;
+﻿using Core.Domain;
 
-namespace VehicleBrands.Application.Contracts.Persistence
+namespace Core.Application.Contracts.Persistence
 {
     public interface IVehicleBrandRepository : IAsyncRepository<VehicleBrand>
     {

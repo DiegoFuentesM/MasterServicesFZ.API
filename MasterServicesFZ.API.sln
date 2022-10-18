@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterServicesFZ.API", "Mas
 		{A465C3B0-278F-4445-8B7F-25C19A54666D} = {A465C3B0-278F-4445-8B7F-25C19A54666D}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VehicleBrands", "VehicleBrands", "{A1B339B4-FF7E-4914-BBB8-CA34E39A562E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A1B339B4-FF7E-4914-BBB8-CA34E39A562E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{E7508AEA-D0F1-4EBA-9E4E-D35669158F08}"
 EndProject
@@ -17,11 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{FDBDD1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B21D8A93-BC06-483A-9A49-B5D534536D7B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleBrands.Domain", "VehicleBrands.Domain\VehicleBrands.Domain.csproj", "{79844C8B-345B-4CA9-9E2D-830C70ED3B76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterServicesFZ.Domain", "VehicleBrands.Domain\MasterServicesFZ.Domain.csproj", "{79844C8B-345B-4CA9-9E2D-830C70ED3B76}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleBrands.Application", "VehicleBrands.Application\VehicleBrands.Application.csproj", "{75532B2D-BC0B-4ECF-91BA-807296DC2C3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterServicesFZ.Application", "VehicleBrands.Application\MasterServicesFZ.Application.csproj", "{75532B2D-BC0B-4ECF-91BA-807296DC2C3B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleBrands.Infrastructure", "VehicleBrands.Infrastructure\VehicleBrands.Infrastructure.csproj", "{A465C3B0-278F-4445-8B7F-25C19A54666D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterServicesFZ.Infrastructure", "VehicleBrands.Infrastructure\MasterServicesFZ.Infrastructure.csproj", "{A465C3B0-278F-4445-8B7F-25C19A54666D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{7655A6F2-0109-49E1-B618-EA27049EDEDC}"
 EndProject
