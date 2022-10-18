@@ -1,12 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Core.Application.Contracts.Persistence;
-using Infrastructure.Persistence;
-using Infrastructure.Repositories;
+using MasterServicesFZ.Application.Contracts.Persistence;
 using MasterServicesFZ.Infrastructure.Persistence;
+using MasterServicesFZ.Infrastructure.Repositories;
 
-namespace Infrastructure
+namespace MasterServicesFZ.Infrastructure
 {
     public static class InfrastructureServiceRegistration
     {
@@ -21,6 +20,7 @@ namespace Infrastructure
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
             services.AddScoped<IVehicleBrandRepository, BrandRepository>();
+            services.AddScoped<IIdentificationTypeRepository, IdentificationTypeRepository>();
 
             return services;
         }
