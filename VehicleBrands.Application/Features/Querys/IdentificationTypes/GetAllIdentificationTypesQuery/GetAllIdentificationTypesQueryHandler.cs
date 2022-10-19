@@ -3,7 +3,7 @@ using MasterServicesFZ.Application.Contracts.Persistence;
 using MasterServicesFZ.Domain;
 using MediatR;
 
-namespace MasterServicesFZ.Application.Features.Querys.GetAllIdinticationTypesQuery
+namespace MasterServicesFZ.Application.Features.Querys.GetAllIdentificationTypesQuery
 {
     public class GetAllIdentificationTypesQueryHandler : IRequestHandler<GetAllIdentificationTypesQuery, List<IdentificactionType>>
     {
