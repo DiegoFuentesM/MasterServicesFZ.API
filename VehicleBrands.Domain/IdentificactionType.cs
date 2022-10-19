@@ -4,6 +4,6 @@
     {
         public string id { get; set; }
         public string nombre { get; set; }
-        public string etiqueta_rpa { get; set; }
+        public string? etiqueta_rpa { get; set; }
     }
 }

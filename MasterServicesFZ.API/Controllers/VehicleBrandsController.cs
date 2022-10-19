@@ -2,13 +2,13 @@
 using MediatR;
 using MasterServicesFZ.Domain;
 using System.Net;
-using MasterServicesFZ.Application.Features.Querys.GetAllBrandsQuery;
+using MasterServicesFZ.Application.Features.Querys.Brands.GetAllBrandsQuery;
 
 namespace MasterServicesFZ.API.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class VehicleBrandsController : Controller
+    public class VehicleBrandsController : ControllerBase
     {
         private readonly IMediator _mediator;
 

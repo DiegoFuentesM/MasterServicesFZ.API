@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using MediatR;
 using MasterServicesFZ.Application.Contracts.Persistence;
-using MasterServicesFZ.Application.Features.Querys.GetAllBrandsQuery.Vm;
+using MasterServicesFZ.Application.Features.Querys.Brands.GetAllBrandsQuery.Vm;
 using MasterServicesFZ.Domain;
 
-namespace MasterServicesFZ.Application.Features.Querys.GetAllBrandsQuery
+namespace MasterServicesFZ.Application.Features.Querys.Brands.GetAllBrandsQuery
 {
     public class GetAllBrandsQueryHandler : IRequestHandler<GetAllBrandsQuery, List<VehicleBrand>>
     {
