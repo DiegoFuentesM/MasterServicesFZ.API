@@ -20,7 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Querys\Cities\" />
     <Folder Include="Features\Querys\Occupations\" />
     <Folder Include="Features\Querys\VehicleTypes\" />
     <Folder Include="Features\Querys\VehicleClass\" />
