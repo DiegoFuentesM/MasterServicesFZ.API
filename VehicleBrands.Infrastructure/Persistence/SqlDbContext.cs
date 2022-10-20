@@ -16,8 +16,13 @@ namespace MasterServicesFZ.Infrastructure.Persistence
             modelBuilder.Entity<Departament>()
                 .ToTable("Scr_Departamento", DboSchema)
                 .HasKey(d => d.CodigoLP);
+
+            modelBuilder.Entity<Municipality>()
+                .ToTable("Scr_Municipio", DboSchema)
+                .HasKey(m => m.CodigoLP);
         }
 
         public DbSet<Departament>? Scr_Departamento { get; set; }
+        public DbSet<Municipality>? Scr_Municipio { get; set; }
     }
 }
