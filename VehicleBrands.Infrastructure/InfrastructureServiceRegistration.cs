@@ -26,6 +26,7 @@ namespace MasterServicesFZ.Infrastructure
             services.AddScoped<IDepartamentRepository, DepartamentRepository>();
             services.AddScoped<IVehicleTypeRepository, VehicleTypeRepository>();
             services.AddScoped<IMunicipalityRepository, MunicipalityRepository>();
+            services.AddScoped<IVehicleClassRepository, VehicleClassRepository>();
 
             return services;
         }
