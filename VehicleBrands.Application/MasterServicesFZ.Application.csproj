@@ -1,10 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Features\Querys\VehicleBrands\**" />
+    <EmbeddedResource Remove="Features\Querys\VehicleBrands\**" />
+    <None Remove="Features\Querys\VehicleBrands\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.0" />
@@ -16,14 +22,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VehicleBrands.Domain\MasterServicesFZ.Domain.csproj" />
+    <Folder Include="Features\Querys\Occupations\" />
+    <Folder Include="Features\Querys\VehicleClass\" />
+    <Folder Include="Features\Querys\VehicleModels\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Querys\Occupations\" />
-    <Folder Include="Features\Querys\VehicleClass\" />
-    <Folder Include="Features\Querys\VehicleBrands\" />
-    <Folder Include="Features\Querys\VehicleModels\" />
+    <ProjectReference Include="..\VehicleBrands.Domain\MasterServicesFZ.Domain.csproj" />
   </ItemGroup>
 
 </Project>
