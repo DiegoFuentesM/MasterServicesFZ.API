@@ -4,6 +4,6 @@ namespace MasterServicesFZ.Application.Contracts.Persistence
 {
     public interface IMunicipalityRepository : IAsyncRepository<Municipality>
     {
-        Task<IEnumerable<Municipality>> GetAllMunicipalityByDepartamentQuery(string departamentId);
+        Task<List<Municipality>> GetAllMunicipalityByDepartamentQuery(string departamentId);
     }
 }
