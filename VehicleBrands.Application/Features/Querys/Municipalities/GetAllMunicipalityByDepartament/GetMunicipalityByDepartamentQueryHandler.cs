@@ -18,9 +18,9 @@ namespace MasterServicesFZ.Application.Features.Querys.Municipalities.GetMunicip
 
         public async Task<List<Municipality>> Handle(GetAllMunicipalityByDepartamentQuery request, CancellationToken cancellationToken)
         {
-            var municipalityEntity = _mapper.Map<Municipality>(request);
-            var municipalityList = await _municipalityRepository.GetAllMunicipalityByDepartamentQuery(request._departament).ToList();
-            return municipalityList;
+            var municipalityList = await _municipalityRepository.GetAllMunicipalityByDepartamentQuery(request._departament);
+
+            return _mapper.Map<List<Municipality>>(municipalityList);
         }
     }
 }
