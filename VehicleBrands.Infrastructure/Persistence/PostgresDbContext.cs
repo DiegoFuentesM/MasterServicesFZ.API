@@ -25,11 +25,15 @@ namespace MasterServicesFZ.Infrastructure.Persistence
 
             modelBuilder.Entity<Fee>()
                 .ToTable("m_tasas", FnzSchema);
+
+            modelBuilder.Entity<VehicleModel>()
+                .ToTable("m_precio_fasecolda_nuevo", FnzSchema);
         }
         public DbSet<VehicleBrand>? m_marca_vehiculo { get; set; }
-        public DbSet<IdentificactionType> m_tipo_identificacion { get; set; }
-        public DbSet<VehicleType> m_tipo_vehiculo { get; set; }
-        public DbSet<VehicleClassBrand> m_marca_vehiculo_clase_vehiculo { get; set; }
+        public DbSet<IdentificactionType>? m_tipo_identificacion { get; set; }
+        public DbSet<VehicleType>? m_tipo_vehiculo { get; set; }
+        public DbSet<VehicleClassBrand>? m_marca_vehiculo_clase_vehiculo { get; set; }
         public DbSet<Fee> m_tasas { get; set; }
+        public DbSet<VehicleModel>? m_precio_fasecolda_nuevo { get; set; }
     }
 }
