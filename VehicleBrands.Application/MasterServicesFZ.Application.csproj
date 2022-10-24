@@ -22,9 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Querys\Occupations\" />
     <Folder Include="Features\Querys\VehicleClass\" />
-    <Folder Include="Features\Querys\VehicleModels\" />
   </ItemGroup>
 
   <ItemGroup>
