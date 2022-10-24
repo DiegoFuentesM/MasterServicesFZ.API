@@ -28,6 +28,8 @@ namespace MasterServicesFZ.Infrastructure
             services.AddScoped<IMunicipalityRepository, MunicipalityRepository>();
             services.AddScoped<IVehicleClassRepository, VehicleClassRepository>();
             services.AddScoped<IFeeRepository, FeeRepository>();
+            services.AddScoped<IVehicleModelRepository, VehicleModelRepository>();
+            services.AddScoped<IOccupationRepository, OccupationRepository>();
 
             return services;
         }
