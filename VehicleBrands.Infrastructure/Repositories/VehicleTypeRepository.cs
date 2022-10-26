@@ -20,7 +20,7 @@ namespace MasterServicesFZ.Infrastructure.Repositories
         public async Task<List<VehicleType>> GetAllByClassBrandId(int classBrandId)
         {
             return await _context.m_tipo_vehiculo
-                 .Where(x => x.marca_clase_vehiculo_clase_id == classBrandId).ToListAsync();
+                 .Where(x => x.marca_vehiculo_clase_vehiculo_id == classBrandId).ToListAsync();
         }
     }
 }
