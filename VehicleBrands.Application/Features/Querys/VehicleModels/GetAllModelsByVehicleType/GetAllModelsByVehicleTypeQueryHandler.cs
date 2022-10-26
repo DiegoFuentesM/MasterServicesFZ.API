@@ -9,7 +9,7 @@ namespace MasterServicesFZ.Application.Features.Querys.VehicleModels.GetAllModel
     {
         private readonly IVehicleModelRepository _vehicleModelRepository;
 
-        public GetAllModelsByVehicleTypeQueryHandler(IVehicleModelRepository vehicleModelRepository, IMapper mapper)
+        public GetAllModelsByVehicleTypeQueryHandler(IVehicleModelRepository vehicleModelRepository)
         {
             _vehicleModelRepository = vehicleModelRepository;
         }
