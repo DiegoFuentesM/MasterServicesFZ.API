@@ -1,3 +1,4 @@
+using MasterServicesFZ.API.Middleware;
 using MasterServicesFZ.Application;
 using MasterServicesFZ.Infrastructure;
 
@@ -34,6 +35,10 @@ app.UseSwaggerUI(options =>
 {
     options.SwaggerEndpoint("./v1/swagger.json", "Servicios Maestros Api V1");
 });
+
+app.UseMiddleware<ApiKeyMiddleware>();
+
+app.UseAuthentication();
 
 app.UseHttpsRedirection();
 
