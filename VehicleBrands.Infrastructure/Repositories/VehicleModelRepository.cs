@@ -13,14 +13,11 @@ namespace MasterServicesFZ.Infrastructure.Repositories
 
         public async Task<List<int>> GetAllModelsByVehicleType(int vehicleTypeID)
         {
-            //var prueba = await _context.m_precio_fasecolda_nuevo.ToListAsync();
-
             var models = await _context.m_precio_fasecolda_nuevo
-                .Where(x => x.precio >= 0 && x.estado && x.tipovehiculo_id == vehicleTypeID && x.modelobienvehiculo_id != 0)
+                .Where(x => x.precio > 0 && x.tipovehiculo_id == vehicleTypeID && x.modelovehiculo_id != 0 && x.estado)
                 .Select(x => x.modelovehiculo_id)
-                .Concat(_context.m_precio_fasecolda_nuevo
-                .Where(x => x.precio >= 0 && x.estado && x.tipovehiculo_id == vehicleTypeID && x.modelobienvehiculo_id != 0)
-                .Select(x => x.modelobienvehiculo_id)).Distinct().ToListAsync();
+                .Concat(_context.m_precio_fasecolda_nuevo.Where(x => x.precio > 0 && x.tipovehiculo_id == vehicleTypeID && x.modelobienvehiculo_id != 0 && x.estado)
+                .Select(x => x.modelobienvehiculo_id )).Distinct().OrderBy(x => x).ToListAsync();
 
             return models;
         }
