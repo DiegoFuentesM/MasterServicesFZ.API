@@ -4,9 +4,17 @@ using MasterServicesFZ.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+//Load appsettings.json
+builder.Host.ConfigureAppConfiguration((hostingContext, config) =>
+{
+    var envName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+    config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+        .AddJsonFile($"appsettings.{envName}.json", optional: true, reloadOnChange: true);
+});
 
+// Add services to the container.
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
