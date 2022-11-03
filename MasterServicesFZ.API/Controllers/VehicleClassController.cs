@@ -7,7 +7,7 @@ using System.Net;
 namespace MasterServicesFZ.API.Controllers
 {
     [ApiController]
-    [Route("Api/v1/[controller]")]
+    [Route("api/v1/[controller]")]
     public class VehicleClassController : ControllerBase
     {
         private readonly IMediator _mediator;
