@@ -5,7 +5,7 @@ using MediatR;
 
 namespace MasterServicesFZ.Application.Features.Querys.VehicleClass.GetAllVehicleClassesByBrand
 {
-    public class GetAllVehicleClassesByBrandQueryHandler : IRequestHandler<GetAllVehicleClassesByBrandQuery, List<VehicleClassVM>>
+    public class GetAllVehicleClassesByBrandQueryHandler : IRequestHandler<GetAllVehicleClassesByBrandQuery, List<GenericResponseVM>>
     {
         private readonly IVehicleClassRepository _vehicleClassRepository;
         private readonly IMapper _mapper;
@@ -16,10 +16,10 @@ namespace MasterServicesFZ.Application.Features.Querys.VehicleClass.GetAllVehicl
             _mapper = mapper;
         }
 
-        public async Task<List<VehicleClassVM>> Handle(GetAllVehicleClassesByBrandQuery request, CancellationToken cancellationToken)
+        public async Task<List<GenericResponseVM>> Handle(GetAllVehicleClassesByBrandQuery request, CancellationToken cancellationToken)
         {
             var classList = await _vehicleClassRepository.GetClassByBrandId(request._BrandId);
-            return _mapper.Map<List<VehicleClassVM>>(classList);
+            return _mapper.Map<List<GenericResponseVM>>(classList);
         }
     }
 }

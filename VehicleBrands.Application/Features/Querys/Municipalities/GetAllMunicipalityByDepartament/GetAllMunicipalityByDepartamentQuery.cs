@@ -1,9 +1,9 @@
-﻿using MasterServicesFZ.Domain;
+﻿using MasterServicesFZ.Application.Features.Shared.VMs;
 using MediatR;
 
 namespace MasterServicesFZ.Application.Features.Querys.Municipalities.GetMunicipalityByDepartament
 {
-    public class GetAllMunicipalityByDepartamentQuery : IRequest<List<Municipality>>
+    public class GetAllMunicipalityByDepartamentQuery : IRequest<List<GenericResponseVM>>
     {
         public string _departament { get; set; } = String.Empty;
 

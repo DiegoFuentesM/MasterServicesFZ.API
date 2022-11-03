@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using MasterServicesFZ.Application.Contracts.Persistence;
-using MasterServicesFZ.Domain;
+using MasterServicesFZ.Application.Features.Shared.VMs;
 using MediatR;
 
 namespace MasterServicesFZ.Application.Features.Querys.Occupations.GetAllOccupationsQuery
 {
-    public class GetAllOccupationsQueryHandler : IRequestHandler<GetAllOccupationsQuery, List<Occupation>>
+    public class GetAllOccupationsQueryHandler : IRequestHandler<GetAllOccupationsQuery, List<GenericResponseVM>>
     {
         private readonly IOccupationRepository _occupationRepository;
         private readonly IMapper _mapper;
@@ -16,10 +16,10 @@ namespace MasterServicesFZ.Application.Features.Querys.Occupations.GetAllOccupat
             _mapper = mapper;
         }
 
-        public async Task<List<Occupation>> Handle(GetAllOccupationsQuery request, CancellationToken cancellationToken)
+        public async Task<List<GenericResponseVM>> Handle(GetAllOccupationsQuery request, CancellationToken cancellationToken)
         {
             var listOccupations = await _occupationRepository.GetAllAsync();
-            var occupations = _mapper.Map<List<Occupation>>(listOccupations);
+            var occupations = _mapper.Map<List<GenericResponseVM>>(listOccupations);
             return occupations;
         }
     }

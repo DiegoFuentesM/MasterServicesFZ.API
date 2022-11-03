@@ -1,9 +1,9 @@
-﻿using MasterServicesFZ.Domain;
+﻿using MasterServicesFZ.Application.Features.Shared.VMs;
 using MediatR;
 
 namespace MasterServicesFZ.Application.Features.Querys.VehicleTypes.GetAllVehicleTypesByBrandAndClassQuery
 {
-    public class GetAllVehicleTypesByBrandAndClassQuery : IRequest<List<VehicleType>>
+    public class GetAllVehicleTypesByBrandAndClassQuery : IRequest<List<GenericResponseVM>>
     {
         public string ClassId { get; set; } = string.Empty;
         public string BrandId { get; set; } = string.Empty;

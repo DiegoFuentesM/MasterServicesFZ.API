@@ -3,7 +3,7 @@ using MediatR;
 
 namespace MasterServicesFZ.Application.Features.Querys.VehicleClass.GetAllVehicleClassesByBrand
 {
-    public class GetAllVehicleClassesByBrandQuery : IRequest<List<VehicleClassVM>>
+    public class GetAllVehicleClassesByBrandQuery : IRequest<List<GenericResponseVM>>
     {
         public string _BrandId { get; set; } = String.Empty;
 

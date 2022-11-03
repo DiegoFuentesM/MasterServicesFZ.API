@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using MasterServicesFZ.Application.Contracts.Persistence;
-using MasterServicesFZ.Domain;
+using MasterServicesFZ.Application.Features.Shared.VMs;
 using MediatR;
 
 namespace MasterServicesFZ.Application.Features.Querys.Departaments.GetAllDepartaments
 {
-    public class GetAllDepartamentsQueryHandler : IRequestHandler<GetAllDepartamentsQuery, List<Departament>>
+    public class GetAllDepartamentsQueryHandler : IRequestHandler<GetAllDepartamentsQuery, List<GenericResponseVM>>
     {
         private readonly IDepartamentRepository _DepartamentRepository;
         private readonly IMapper _mapper;
@@ -16,10 +16,10 @@ namespace MasterServicesFZ.Application.Features.Querys.Departaments.GetAllDepart
             _mapper = mapper;
         }
 
-        public async Task<List<Departament>> Handle(GetAllDepartamentsQuery request, CancellationToken cancellationToken)
+        public async Task<List<GenericResponseVM>> Handle(GetAllDepartamentsQuery request, CancellationToken cancellationToken)
         {
             var departamentList = await _DepartamentRepository.GetAllAsync();
-            var departaments = _mapper.Map<List<Departament>>(departamentList.ToList());
+            var departaments = _mapper.Map<List<GenericResponseVM>>(departamentList.ToList());
             return departaments;
         }
     }
