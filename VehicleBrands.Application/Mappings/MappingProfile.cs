@@ -33,7 +33,7 @@ namespace MasterServicesFZ.Application.Mappings
                 .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Nombre));
 
             CreateMap<Occupation, GenericResponseVM>()
-                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CodigoLP))
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CodigoScr))
                 .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Descripcion));
 
             CreateMap<VehicleModel, GenericResponseVM>()
