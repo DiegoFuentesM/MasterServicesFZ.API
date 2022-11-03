@@ -1,5 +1,5 @@
 ﻿using MasterServicesFZ.Application.Features.Querys.Municipalities.GetMunicipalityByDepartament;
-using MasterServicesFZ.Domain;
+using MasterServicesFZ.Application.Features.Shared.VMs;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -18,7 +18,7 @@ namespace MasterServicesFZ.API.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(typeof(Municipality), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(GenericResponseVM), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
         [ProducesResponseType((int)HttpStatusCode.Forbidden)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]

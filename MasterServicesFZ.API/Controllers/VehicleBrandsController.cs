@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MediatR;
-using MasterServicesFZ.Domain;
 using System.Net;
 using MasterServicesFZ.Application.Features.Querys.Brands.GetAllBrandsQuery;
+using MasterServicesFZ.Application.Features.Shared.VMs;
 
 namespace MasterServicesFZ.API.Controllers
 {
@@ -18,7 +18,7 @@ namespace MasterServicesFZ.API.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(typeof(VehicleBrand), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(GenericResponseVM), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
         public async Task<IActionResult> GetVehicleBrands()
         {

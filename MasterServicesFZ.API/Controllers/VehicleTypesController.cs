@@ -1,5 +1,5 @@
 ﻿using MasterServicesFZ.Application.Features.Querys.VehicleTypes.GetAllVehicleTypesByBrandAndClassQuery;
-using MasterServicesFZ.Domain;
+using MasterServicesFZ.Application.Features.Shared.VMs;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -18,7 +18,7 @@ namespace MasterServicesFZ.API.Controllers
         }
 
         [HttpGet("{classId}/{brandId}")]
-        [ProducesResponseType(typeof(VehicleType), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(GenericResponseVM), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
         public async Task<IActionResult> GetVeiclesTypes(string classId, string brandId)
         {

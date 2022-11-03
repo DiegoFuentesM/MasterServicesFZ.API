@@ -18,7 +18,7 @@ namespace MasterServicesFZ.API.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(typeof(List<VehicleClassVM>), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(List<GenericResponseVM>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
         [ProducesResponseType((int)HttpStatusCode.Forbidden)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
