@@ -22,15 +22,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddApplicationServices();
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("CorsPolicy", builder => builder
-    .AllowAnyOrigin()
-    .AllowAnyMethod()
-    .AllowAnyHeader()
-    );
-});
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -52,7 +43,10 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.UseCors("CorsPolicy");
+app.UseCors(x => x
+.AllowAnyOrigin()
+.AllowAnyHeader()
+.AllowAnyMethod());
 
 app.MapControllers();
 
