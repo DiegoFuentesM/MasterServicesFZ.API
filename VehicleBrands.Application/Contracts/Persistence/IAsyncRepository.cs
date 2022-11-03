@@ -21,7 +21,7 @@ namespace MasterServicesFZ.Application.Contracts.Persistence
         // Método para obtener un elemento de la colección. 
         Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>> predicate = null,
                                         Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
-                                        List<Expression<Func<T, object>>> includes = null,// "includes" es la sintaxis que permite agregarle entidades al query. por eso se incluye ese parámetro para posteriormente agregarle entidades al query.
+                                        List<Expression<Func<T, object>>> includes = null,
                                         bool disableTracking = true
             );
 
