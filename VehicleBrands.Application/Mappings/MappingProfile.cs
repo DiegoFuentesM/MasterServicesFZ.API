@@ -8,7 +8,41 @@ namespace MasterServicesFZ.Application.Mappings
     {
         public MappingProfile()
         {
-            CreateMap<VehicleClassBrand, VehicleClassVM>();
+            CreateMap<VehicleClassBrand, GenericResponseVM>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.clase_vehiculo_id))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.clasevehiculo));
+
+            CreateMap<VehicleBrand, GenericResponseVM>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.id))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.nombre));
+
+            CreateMap<Departament, GenericResponseVM>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CodigoLP))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Nombre));
+
+            CreateMap<Fee, GenericResponseVM>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.id))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.tasa));
+
+            CreateMap<IdentificactionType, GenericResponseVM>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.id))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.nombre));
+
+            CreateMap<Municipality, GenericResponseVM>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CodigoLP))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Nombre));
+
+            CreateMap<Occupation, GenericResponseVM>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CodigoLP))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Descripcion));
+
+            CreateMap<VehicleModel, GenericResponseVM>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.id))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.modelovehiculo_id));
+
+            CreateMap<VehicleType, GenericResponseVM>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.id))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.tipo));
         }
 
     }
