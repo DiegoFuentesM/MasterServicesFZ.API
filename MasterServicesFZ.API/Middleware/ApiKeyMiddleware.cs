@@ -11,8 +11,7 @@
         }
         public async Task InvokeAsync(HttpContext context)
         {
-            if (!context.Request.Headers.TryGetValue(APIKEY, out
-                    var extractedApiKey))
+            if (!context.Request.Headers.TryGetValue(APIKEY, out var extractedApiKey))
             {
                 context.Response.StatusCode = 401;
                 await context.Response.WriteAsync("Api Key was not provided ");
