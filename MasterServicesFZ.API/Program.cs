@@ -1,8 +1,13 @@
+using dotenv.net;
+using MasterServicesFZ.API.Configuration;
 using MasterServicesFZ.API.Middleware;
 using MasterServicesFZ.Application;
 using MasterServicesFZ.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//Load environment variables
+DotEnv.Load();
 
 //Load appsettings.json
 builder.Host.ConfigureAppConfiguration((hostingContext, config) =>
@@ -17,11 +22,21 @@ builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//Configure swagger
+builder.Services.ConfigureSwagger();
 
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddApplicationServices();
 
+//Configure cors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    );
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,18 +50,13 @@ app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("./v1/swagger.json", "Servicios Maestros Api V1");
 });
 
-app.UseMiddleware<ApiKeyMiddleware>();
+//app.UseMiddleware<ApiKeyMiddleware>();
 
 app.UseAuthentication();
 
-app.UseHttpsRedirection();
-
 app.UseAuthorization();
 
-app.UseCors(x => x
-.AllowAnyOrigin()
-.AllowAnyHeader()
-.AllowAnyMethod());
+app.UseCors("CorsPolicy");
 
 app.MapControllers();
 
