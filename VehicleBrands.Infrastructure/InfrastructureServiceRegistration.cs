@@ -17,6 +17,9 @@ namespace MasterServicesFZ.Infrastructure
             services.AddDbContext<SqlDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("SqlConnection"))
             );
+            services.AddDbContext<CreditProductsDbContext>(options =>
+                options.UseSqlServer(configuration.GetConnectionString("CreditProductsConnection"))
+            );
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
             services.AddScoped(typeof(IAsyncRepository<>), typeof(SqlRepositoryBase<>));
@@ -31,6 +34,7 @@ namespace MasterServicesFZ.Infrastructure
             services.AddScoped<IVehicleModelRepository, VehicleModelRepository>();
             services.AddScoped<IOccupationRepository, OccupationRepository>();
             services.AddScoped<IContractTypeRepository, ContractTypeRepository>();
+            services.AddScoped<IAccountTypeRepository, AccountTypeRepository>();
 
             return services;
         }
