@@ -47,6 +47,10 @@ namespace MasterServicesFZ.Application.Mappings
             CreateMap<ContractType, GenericResponseVM>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CodigoScr))
                 .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Descripcion));
+
+            CreateMap<AccountType, GenericResponseVM>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.TipoCuentaID))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Nombre));
         }
 
     }
