@@ -3,7 +3,7 @@ using MediatR;
 
 namespace MasterServicesFZ.Application.Features.Querys.Departaments.GetAllDepartaments
 {
-    public class GetAllDepartamentsQuery : IRequest<List<GenericResponseVM>>
+    public class GetAllDepartmentsQuery : IRequest<List<GenericResponseVM>>
     {
     }
 }

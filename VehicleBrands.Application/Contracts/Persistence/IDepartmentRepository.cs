@@ -2,7 +2,7 @@
 
 namespace MasterServicesFZ.Application.Contracts.Persistence
 {
-    public interface IDepartamentRepository : IAsyncRepository<Departament>
+    public interface IDepartmentRepository : IAsyncRepository<Department>
     {
     }
 }

@@ -16,7 +16,7 @@ namespace MasterServicesFZ.Application.Mappings
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.id))
                 .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.nombre));
 
-            CreateMap<Departament, GenericResponseVM>()
+            CreateMap<Department, GenericResponseVM>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CodigoLP))
                 .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Nombre));
 

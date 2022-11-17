@@ -4,9 +4,9 @@ using MasterServicesFZ.Infrastructure.Persistence;
 
 namespace MasterServicesFZ.Infrastructure.Repositories
 {
-    public class DepartamentRepository : SqlRepositoryBase<Departament>, IDepartamentRepository
+    public class DepartmentRepository : SqlRepositoryBase<Department>, IDepartmentRepository
     {
-        public DepartamentRepository(SqlDbContext context) : base(context)
+        public DepartmentRepository(SqlDbContext context) : base(context)
         {
         }
     }
