@@ -1,4 +1,4 @@
-﻿using MasterServicesFZ.Application.Features.Querys.Departaments.GetAllDepartaments;
+﻿using MasterServicesFZ.Application.Features.Querys.GetAllIdentificationTypesQuery;
 using MasterServicesFZ.Application.Features.Shared.VMs;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -8,11 +8,11 @@ namespace MasterServicesFZ.API.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class DepartamentController : ControllerBase
+    public class IdentificationTypeController : Controller
     {
         private readonly IMediator _mediator;
 
-        public DepartamentController(IMediator mediator)
+        public IdentificationTypeController(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -20,12 +20,10 @@ namespace MasterServicesFZ.API.Controllers
         [HttpGet]
         [ProducesResponseType(typeof(GenericResponseVM), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
-        [ProducesResponseType((int)HttpStatusCode.Forbidden)]
-        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> GetDepartaments()
+        public async Task<IActionResult> GetIdentificationTypes()
         {
-            var departaments = await _mediator.Send(new GetAllDepartamentsQuery());
-            return Ok(departaments);
+            var identificationTypes = await _mediator.Send(new GetAllIdentificationTypesQuery());
+            return Ok(identificationTypes);
         }
     }
 }

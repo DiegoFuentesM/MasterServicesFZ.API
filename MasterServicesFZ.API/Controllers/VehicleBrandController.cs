@@ -8,11 +8,11 @@ namespace MasterServicesFZ.API.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class VehicleBrandsController : ControllerBase
+    public class VehicleBrandController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public VehicleBrandsController(IMediator mediator)
+        public VehicleBrandController(IMediator mediator)
         {
             _mediator = mediator;
         }
