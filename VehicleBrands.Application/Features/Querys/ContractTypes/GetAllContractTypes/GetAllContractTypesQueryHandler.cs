@@ -19,7 +19,7 @@ namespace MasterServicesFZ.Application.Features.Querys.ContractTypes.GetAllContr
         public async Task<List<GenericResponseVM>> Handle(GetAllContractTypesQuery request, CancellationToken cancellationToken)
         {
             var contractTypesList = await _contractTypeRepository.GetAllAsync();
-            var contractTypes = _mapper.Map<List<GenericResponseVM>>(contractTypesList);
+            var contractTypes = _mapper.Map<List<GenericResponseVM>>(contractTypesList).OrderBy(c => c.Value).ToList();
             return contractTypes;
         }
     }

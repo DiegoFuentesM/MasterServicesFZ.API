@@ -19,7 +19,7 @@ namespace MasterServicesFZ.Application.Features.Querys.Fees.GetAllFees
         public async Task<List<GenericResponseVM>> Handle(GetAllFeesQuery request, CancellationToken cancellationToken)
         {
             var feeList = await _FeeRepository.GetAllAsync();
-            return _mapper.Map<List<GenericResponseVM>>(feeList);
+            return _mapper.Map<List<GenericResponseVM>>(feeList).OrderBy(f => f.Value).ToList();
         }
     }
 }

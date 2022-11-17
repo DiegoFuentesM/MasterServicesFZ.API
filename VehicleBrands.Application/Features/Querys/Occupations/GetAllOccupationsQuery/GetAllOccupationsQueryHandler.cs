@@ -19,7 +19,7 @@ namespace MasterServicesFZ.Application.Features.Querys.Occupations.GetAllOccupat
         public async Task<List<GenericResponseVM>> Handle(GetAllOccupationsQuery request, CancellationToken cancellationToken)
         {
             var listOccupations = await _occupationRepository.GetAllAsync();
-            var occupations = _mapper.Map<List<GenericResponseVM>>(listOccupations);
+            var occupations = _mapper.Map<List<GenericResponseVM>>(listOccupations).OrderBy(o => o.Value).ToList();
             return occupations;
         }
     }

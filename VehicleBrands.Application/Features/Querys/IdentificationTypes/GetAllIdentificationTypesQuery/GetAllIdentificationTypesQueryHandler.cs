@@ -19,7 +19,7 @@ namespace MasterServicesFZ.Application.Features.Querys.GetAllIdentificationTypes
         public async Task<List<GenericResponseVM>> Handle(GetAllIdentificationTypesQuery request, CancellationToken cancellationToken)
         {
             var listIdentificationTypes = await _identificationRepository.GetAllAsync();
-            var identificationTypes = _mapper.Map<List<GenericResponseVM>>(listIdentificationTypes);
+            var identificationTypes = _mapper.Map<List<GenericResponseVM>>(listIdentificationTypes).OrderBy(i => i.Value).ToList();
             return identificationTypes;
         }
            

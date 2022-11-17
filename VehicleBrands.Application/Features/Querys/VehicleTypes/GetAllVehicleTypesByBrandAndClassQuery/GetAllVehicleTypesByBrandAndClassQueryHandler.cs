@@ -20,7 +20,7 @@ namespace MasterServicesFZ.Application.Features.Querys.VehicleTypes.GetAllVehicl
         {
             int classBrandId = await _vehicleTypeRepository.GetClassBrandId(request.ClassId, request.BrandId);
             var listVehicleTypes = await _vehicleTypeRepository.GetAllByClassBrandId(classBrandId);
-            var vehicleTypes = _mapper.Map<List<GenericResponseVM>>(listVehicleTypes);
+            var vehicleTypes = _mapper.Map<List<GenericResponseVM>>(listVehicleTypes).OrderBy(t => t.Value).ToList();
             return vehicleTypes;
         }
     }

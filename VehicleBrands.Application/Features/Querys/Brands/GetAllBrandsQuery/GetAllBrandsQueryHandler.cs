@@ -20,9 +20,8 @@ namespace MasterServicesFZ.Application.Features.Querys.Brands.GetAllBrandsQuery
         public async Task<List<GenericResponseVM>> Handle(GetAllBrandsQuery request, CancellationToken cancellationToken)
         {
             var vehicleBrandList = await _vehicleBrandRepository.GetAllAsync();
-            var brands = _mapper.Map<List<GenericResponseVM>>(vehicleBrandList.ToList());
+            var brands = _mapper.Map<List<GenericResponseVM>>(vehicleBrandList.OrderBy(b => b.nombre).ToList());
             return brands;
-            //throw new NotImplementedException();
         }
     }
 }
