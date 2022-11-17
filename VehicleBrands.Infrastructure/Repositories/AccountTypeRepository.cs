@@ -13,7 +13,7 @@ namespace MasterServicesFZ.Infrastructure.Repositories
 
         public async Task<List<AccountType>> GetAllActive()
         {
-            return await _context.TiposCuenta.Where(x => x.Activo).ToListAsync();
+            return await _context.TiposCuenta.Where(x => x.Activo).OrderBy(x => x.Nombre).ToListAsync();
         }
     }
 }

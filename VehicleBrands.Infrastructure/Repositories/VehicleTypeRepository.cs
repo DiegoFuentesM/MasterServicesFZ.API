@@ -13,13 +13,13 @@ namespace MasterServicesFZ.Infrastructure.Repositories
 
         public async Task<int> GetClassBrandId(string classId, string brandId)
         {
-            return await _context.m_marca_vehiculo_clase_vehiculo
+            return await _context.m_marca_vehiculo_clase_vehiculo!
                 .Where(x => x.clase_vehiculo_id == classId && x.marca_vehiculo_id == brandId)
                 .Select(x => x.id).FirstOrDefaultAsync();
         }
         public async Task<List<VehicleType>> GetAllByClassBrandId(int classBrandId)
         {
-            return await _context.m_tipo_vehiculo
+            return await _context.m_tipo_vehiculo!
                  .Where(x => x.marca_vehiculo_clase_vehiculo_id == classBrandId).ToListAsync();
         }
     }

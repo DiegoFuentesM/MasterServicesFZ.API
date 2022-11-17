@@ -13,7 +13,7 @@ namespace MasterServicesFZ.Infrastructure.Repositories
 
         public async Task<List<Municipality>> GetAllMunicipalityByDepartamentQuery(string departamentId)
         {
-            var municipalities = await _context.Scr_Municipio!.Where(m => m.Departamento_Id == departamentId).ToListAsync();
+            var municipalities = await _context.Scr_Municipio!.Where(m => m.Departamento_Id == departamentId).OrderBy(m => m.Nombre).ToListAsync();
             return municipalities;
         }
 
