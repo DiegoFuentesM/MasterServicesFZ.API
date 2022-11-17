@@ -13,7 +13,7 @@ namespace MasterServicesFZ.Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Departament>()
+            modelBuilder.Entity<Department>()
                 .ToTable("Scr_Departamento", DboSchema)
                 .HasKey(d => d.CodigoLP);
 
@@ -30,7 +30,7 @@ namespace MasterServicesFZ.Infrastructure.Persistence
                 .HasKey(m => m.CodigoLP);
         }
 
-        public DbSet<Departament>? Scr_Departamento { get; set; }
+        public DbSet<Department>? Scr_Departamento { get; set; }
         public DbSet<Municipality>? Scr_Municipio { get; set; }
         public DbSet<Occupation>? Scr_Ocupacion { get; set; }
         public DbSet<ContractType>? Scr_TipoContrato { get; set; }
