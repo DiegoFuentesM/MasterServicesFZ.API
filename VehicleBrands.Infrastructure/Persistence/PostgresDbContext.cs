@@ -28,6 +28,9 @@ namespace MasterServicesFZ.Infrastructure.Persistence
 
             modelBuilder.Entity<VehicleModel>()
                 .ToTable("m_precio_fasecolda_nuevo", FnzSchema);
+
+            modelBuilder.Entity<InternationalBusiness>()
+                .ToTable("m_tipo_operacion", FnzSchema);
         }
         public DbSet<VehicleBrand>? m_marca_vehiculo { get; set; }
         public DbSet<IdentificactionType>? m_tipo_identificacion { get; set; }
@@ -35,5 +38,6 @@ namespace MasterServicesFZ.Infrastructure.Persistence
         public DbSet<VehicleClassBrand>? m_marca_vehiculo_clase_vehiculo { get; set; }
         public DbSet<Fee> m_tasas { get; set; }
         public DbSet<VehicleModel>? m_precio_fasecolda_nuevo { get; set; }
+        public DbSet<InternationalBusiness>? m_tipo_operacion { get; set; }
     }
 }
