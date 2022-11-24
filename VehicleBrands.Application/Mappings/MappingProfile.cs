@@ -59,6 +59,10 @@ namespace MasterServicesFZ.Application.Mappings
             CreateMap<ResidenceType, GenericResponseVM>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CodigoScr))
                 .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Descripcion));
+
+            CreateMap<InternationalBusiness, GenericResponseVM>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.id))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.tipo_operacion));
         }
 
     }
