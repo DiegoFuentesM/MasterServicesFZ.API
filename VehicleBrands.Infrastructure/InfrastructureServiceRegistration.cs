@@ -37,6 +37,7 @@ namespace MasterServicesFZ.Infrastructure
             services.AddScoped<IAccountTypeRepository, AccountTypeRepository>();
             services.AddScoped<IMaritalStatusRepository, MaritalStatusRepository>();
             services.AddScoped<IResidenceTypeRepository, ResidenceTypeRepository>();
+            services.AddScoped<IInternationalBusinessRepository, InternationalBusinessRepository>();
 
             return services;
         }
