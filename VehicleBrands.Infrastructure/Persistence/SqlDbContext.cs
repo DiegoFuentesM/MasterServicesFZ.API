@@ -28,11 +28,21 @@ namespace MasterServicesFZ.Infrastructure.Persistence
             modelBuilder.Entity<ContractType>()
                 .ToTable("Scr_TipoContrato", DboSchema)
                 .HasKey(m => m.CodigoLP);
+
+            modelBuilder.Entity<MaritalStatus>()
+                .ToTable("Scr_EstadoCivil", DboSchema)
+                .HasKey(m => m.CodigoLP);
+
+            modelBuilder.Entity<ResidenceType>()
+                .ToTable("Scr_TipoVivienda", DboSchema)
+                .HasKey(m => m.CodigoLP);
         }
 
         public DbSet<Department>? Scr_Departamento { get; set; }
         public DbSet<Municipality>? Scr_Municipio { get; set; }
         public DbSet<Occupation>? Scr_Ocupacion { get; set; }
         public DbSet<ContractType>? Scr_TipoContrato { get; set; }
+        public DbSet<MaritalStatus>? Scr_EstadoCivil { get; set; }
+        public DbSet<ResidenceType>? Scr_TipoVivienda { get; set; }
     }
 }
