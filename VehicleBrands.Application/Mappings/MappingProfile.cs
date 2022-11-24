@@ -55,6 +55,10 @@ namespace MasterServicesFZ.Application.Mappings
             CreateMap<MaritalStatus, GenericResponseVM>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CodigoScr))
                 .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Descripcion));
+
+            CreateMap<ResidenceType, GenericResponseVM>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CodigoScr))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Descripcion));
         }
 
     }
