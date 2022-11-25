@@ -23,7 +23,7 @@ namespace MasterServicesFZ.Infrastructure.Persistence
 
             modelBuilder.Entity<Occupation>()
                 .ToTable("Scr_Ocupacion", DboSchema)
-                .HasKey(m => m.CodigoLP);
+                .HasKey(o => o.CodigoLP);
 
             modelBuilder.Entity<ContractType>()
                 .ToTable("Scr_TipoContrato", DboSchema)
@@ -36,6 +36,10 @@ namespace MasterServicesFZ.Infrastructure.Persistence
             modelBuilder.Entity<ResidenceType>()
                 .ToTable("Scr_TipoVivienda", DboSchema)
                 .HasKey(m => m.CodigoLP);
+
+            modelBuilder.Entity<InitialPaymentOrigin>()
+                .ToTable("Scr_OrigenCuotaInicial", DboSchema)
+                .HasKey(o => o.Id);
         }
 
         public DbSet<Department>? Scr_Departamento { get; set; }
@@ -44,5 +48,6 @@ namespace MasterServicesFZ.Infrastructure.Persistence
         public DbSet<ContractType>? Scr_TipoContrato { get; set; }
         public DbSet<MaritalStatus>? Scr_EstadoCivil { get; set; }
         public DbSet<ResidenceType>? Scr_TipoVivienda { get; set; }
+        public DbSet<InitialPaymentOrigin>? Scr_OrigenCuotaInicial { get; set; }
     }
 }
