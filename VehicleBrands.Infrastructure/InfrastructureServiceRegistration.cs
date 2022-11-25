@@ -38,6 +38,8 @@ namespace MasterServicesFZ.Infrastructure
             services.AddScoped<IMaritalStatusRepository, MaritalStatusRepository>();
             services.AddScoped<IResidenceTypeRepository, ResidenceTypeRepository>();
             services.AddScoped<IInternationalBusinessRepository, InternationalBusinessRepository>();
+            services.AddScoped<IProfessionRepository, ProfessionRepository>();
+            services.AddScoped<IInitialPaymentOriginRepository, InitialPaymentOriginRepository>();
 
             return services;
         }
