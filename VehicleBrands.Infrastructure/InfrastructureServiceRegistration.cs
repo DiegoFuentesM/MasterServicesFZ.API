@@ -40,6 +40,7 @@ namespace MasterServicesFZ.Infrastructure
             services.AddScoped<IInternationalBusinessRepository, InternationalBusinessRepository>();
             services.AddScoped<IProfessionRepository, ProfessionRepository>();
             services.AddScoped<IInitialPaymentOriginRepository, InitialPaymentOriginRepository>();
+            services.AddScoped<IGoodTypeRepository, GoodTypeRepository>();
 
             return services;
         }
