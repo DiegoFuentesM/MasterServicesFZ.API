@@ -71,6 +71,10 @@ namespace MasterServicesFZ.Application.Mappings
             CreateMap<InitialPaymentOrigin, GenericResponseVM>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
                 .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Descripcion));
+
+            CreateMap<GoodType, GenericResponseVM>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.id))
+                .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.nombre));
         }
 
     }
