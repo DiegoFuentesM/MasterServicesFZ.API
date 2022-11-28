@@ -34,6 +34,9 @@ namespace MasterServicesFZ.Infrastructure.Persistence
 
             modelBuilder.Entity<Profession>()
                 .ToTable("m_profesion", FnzSchema);
+
+            modelBuilder.Entity<GoodType>()
+                .ToTable("m_tipo_inmueble", FnzSchema);
         }
         public DbSet<VehicleBrand>? m_marca_vehiculo { get; set; }
         public DbSet<IdentificactionType>? m_tipo_identificacion { get; set; }
@@ -43,5 +46,6 @@ namespace MasterServicesFZ.Infrastructure.Persistence
         public DbSet<VehicleModel>? m_precio_fasecolda_nuevo { get; set; }
         public DbSet<InternationalBusiness>? m_tipo_operacion { get; set; }
         public DbSet<Profession>? m_profesion { get; set; }
+        public DbSet<GoodType>? m_tipo_inmueble { get; set; }
     }
 }
