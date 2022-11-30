@@ -1,5 +1,6 @@
 ﻿using MasterServicesFZ.Application.Features.Querys.VehicleModels.GetAllModelsByVehicleType;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -7,6 +8,7 @@ namespace MasterServicesFZ.API.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
+    [Authorize]
     public class VehicleModelController : ControllerBase
     {
         private readonly IMediator _mediator;

@@ -1,11 +1,13 @@
 ﻿using MasterServicesFZ.Application.Features.Querys.Professions.GetAllProfessions;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MasterServicesFZ.API.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
+    [Authorize]
     public class ProfessionController : Controller
     {
         private readonly IMediator _mediator;

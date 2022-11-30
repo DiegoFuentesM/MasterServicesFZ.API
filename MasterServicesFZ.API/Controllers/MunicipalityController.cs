@@ -1,6 +1,7 @@
 ﻿using MasterServicesFZ.Application.Features.Querys.Municipalities.GetMunicipalityByDepartament;
 using MasterServicesFZ.Application.Features.Shared.VMs;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -8,6 +9,7 @@ namespace MasterServicesFZ.API.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
+    [Authorize]
     public class MunicipalityController : ControllerBase
     {
         private readonly IMediator _mediator;

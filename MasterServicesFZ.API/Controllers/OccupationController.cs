@@ -1,11 +1,13 @@
 ﻿using MasterServicesFZ.Application.Features.Querys.Occupations.GetAllOccupationsQuery;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MasterServicesFZ.API.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
+    [Authorize]
     public class OccupationController : ControllerBase
     {
         private readonly IMediator _mediator;
