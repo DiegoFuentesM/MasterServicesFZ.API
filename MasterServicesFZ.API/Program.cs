@@ -2,6 +2,7 @@ using dotenv.net;
 using MasterServicesFZ.API.Configuration;
 using MasterServicesFZ.API.Middleware;
 using MasterServicesFZ.Application;
+using MasterServicesFZ.Auth;
 using MasterServicesFZ.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,6 +28,7 @@ builder.Services.ConfigureSwagger();
 
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddApplicationServices();
+builder.Services.AddAuthServices(builder.Configuration);
 
 //Configure cors
 builder.Services.AddCors(options =>
